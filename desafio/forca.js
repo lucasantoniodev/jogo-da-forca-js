@@ -1,16 +1,84 @@
 class Forca {
+  constructor (palavraSecreta) {
+    this.palavraSecreta = palavraSecreta
+    this.palavra = []
+    this.letrasChutadas = []
+    this.palavraCompleta = this.gerarLinhas()
+    this.vidas = 6
+    this.estado = 'aguardando chute'
+  }
 
-  chutar(letra) { }
+  chutar (letra = '') {
 
-  buscarEstado() { return ""; } // Possiveis valores: "perdeu", "aguardando chute" ou "ganhou"
+    if (this.vidas <= 0) {
+      console.log('Vidas insulficientes!')
+      this.estado = 'perdeu'
+      return
+    }
 
-  buscarDadosDoJogo() {
-      return {
-          letrasChutadas: [], // Deve conter todas as letras chutadas
-          vidas: 6, // Quantidade de vidas restantes
-          palavra: [] // Deve ser um array com as letras que já foram acertadas ou o valor "_" para as letras não identificadas
+    if (letra.length > 1) {
+      console.log('Digite apenas uma letra.\n')
+      return
+    }
+
+    const letraLower = letra.toLowerCase()
+
+    if (this.letrasChutadas.includes(letraLower)) {
+      console.log('Você já digitou essa letra antes, tente uma diferente.\n')
+      return
+    }
+
+    if (this.palavraSecreta.includes(letraLower)) {
+      this.letrasChutadas.push(letraLower)
+
+      for (let l in this.palavraSecreta) {
+        if (letraLower === this.palavraSecreta[l]) {
+          this.palavra.push(letraLower)
+        }
       }
+    } else {
+      this.letrasChutadas.push(letraLower)
+      this.vidas--
+      console.log(
+        `Você errou, agora você tem um total de ${this.vidas} vidas.\n`
+      )
+    }
+
+    for (let l in this.palavraCompleta) {
+      if (this.palavraSecreta[l] === letraLower) {
+        this.palavraCompleta[l] = letraLower
+      }
+    }
+
+    let palavraTemporaria = ''
+    for (let i in this.palavraCompleta) {
+      palavraTemporaria += this.palavraCompleta[i]
+      if (palavraTemporaria === this.palavraSecreta) {
+        this.estado = 'ganhou'
+      }
+    }
+    console.log(palavraTemporaria)
+  }
+
+  gerarLinhas () {
+    let linhas = []
+    for (let i = 1; i <= this.palavraSecreta.length; i++) {
+      linhas.push('_')
+    }
+    return linhas
+  }
+
+  buscarEstado () {
+    return this.estado
+  }
+
+  buscarDadosDoJogo () {
+    return {
+      letrasChutadas: this.letrasChutadas,
+      vidas: this.vidas,
+      palavra: this.palavraCompleta 
+    }
   }
 }
 
-module.exports = Forca;
+module.exports = Forca
