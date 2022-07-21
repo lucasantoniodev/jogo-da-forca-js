@@ -9,13 +9,6 @@ class Forca {
   }
 
   chutar (letra = 'string') {
-    // Verificar quantidade de vidas
-    if (this.vidas <= 0) {
-      console.log('Vidas insulficientes!')
-      this.estado = 'perdeu'
-      return
-    }
-
     // Validando quantidade de letras
     if (letra.length > 1) {
       console.log('Você só pode digitar uma letra, tente novamente.\n')
@@ -63,6 +56,12 @@ class Forca {
       if (palavraTemporaria === this.palavraSecreta) {
         this.estado = 'ganhou'
       }
+    }
+
+    // Verificar quantidade de vidas
+    if (this.vidas < 1) {
+      console.log('Vidas insulficientes!')
+      this.estado = 'perdeu'
     }
   }
 

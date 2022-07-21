@@ -3,7 +3,7 @@ const validarEtapa = (vidasEsperadas, palavraEsperada, letrasChutadasEsperadas, 
     const palavra = arrPalavra.join('');
     const letrasChutadas = arrLetrasChutadas.join('');
     const estado = jogoForca.buscarEstado();
-
+        
     return vidas === vidasEsperadas
         && palavra === palavraEsperada
         && letrasChutadas === letrasChutadasEsperadas
