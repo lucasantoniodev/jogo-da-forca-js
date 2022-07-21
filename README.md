@@ -6,6 +6,7 @@ O principal objetivo é desenvolver as regras de um jogo da forca.
 
 Referência: start@dbserver.com.br
 
+## Sobre o jogo
 
 ![forca](docs/forca.gif) 
 
