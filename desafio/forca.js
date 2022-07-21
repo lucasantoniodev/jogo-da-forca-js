@@ -64,7 +64,6 @@ class Forca {
         this.estado = 'ganhou'
       }
     }
-    console.log(palavraTemporaria)
   }
 
   // Gerando quantidade de linhas com base na palavra secreta
@@ -84,7 +83,8 @@ class Forca {
     return {
       letrasChutadas: this.letrasChutadas,
       vidas: this.vidas,
-      palavra: this.palavraCompleta.join('')
+      palavra: this.palavraCompleta,
+      palavraCompleta: this.palavraCompleta.join('')
     }
   }
 }
