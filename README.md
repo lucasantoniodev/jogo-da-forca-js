@@ -1,6 +1,9 @@
 # O desafio da forca
 
-Olá! Você está prestes a iniciar o nosso desafio para a seleção do StartDB. Se você chegou aqui sem conhecer o StartDB, você pode encontrar mais informações [neste link](https://start.dbserver.com.br/). O desafio desse ano será desenvolver as regras de um jogo da forca. 
+Este se trata de um desafio para seleção do StartDB, um programa de estágios que tem como objetivo inserir pessoas alunas no mercado de tecnologia.
+
+O principal objetivo é desenvolver as regras de um jogo da forca.
+
 Você conhece o jogo da forca?
 
 ![forca](docs/forca.gif) 
