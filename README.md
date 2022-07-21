@@ -14,32 +14,6 @@ Você conhece o jogo da forca?
 
 > **Observação:** Somente precisa ser implementado as regras do jogo, não é preciso desenvolver a interface do jogo, o GIF é para demonstração.
 
-# Como faço o desafio?
-
-## Baixando o código do desafio
-![image](docs/clone-repo.png)
-1. Em <i>Code</i> clique em <i>Download Zip</i>
-2. Acessar o arquivo [desafio.js](https://github.com/dbserver/startdb-2022/blob/main/desafio/desafio.js)
-3. Resolver os desafios que estão comentados no [arquivo de regras](docs/Regras.md)
-
-## Ou clonando o projeto no Github:
-
-1. Clonar projeto (Se não sabe como, acesse [aqui](https://docs.github.com/pt/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository))
-2. Acessar o arquivo [desafio.js](https://github.com/dbserver/startdb-2022/blob/main/desafio/desafio.js)
-3. Resolver os desafios que estão comentados no [arquivo de regras](docs/Regras.md)
-
-## Instalando o Node e rodando localmente
-
-1. Instalar o [Node](https://nodejs.org/en/)
-2. Instalar dependencias do projeto com o seguinte comando:
-```bash
-npm install
-```
-3. Para interagir com o jogo durante o desenvolvimento, você pode executar `desafio.js`, que irá iniciar o jogo no terminal, com o seguinte comando:
-```bash
-npm start
-```
-
 ## Regras do jogo
 
 As regras estão descritas [nesse arquivo](docs/Regras.md).
